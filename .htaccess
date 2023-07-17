@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+
+RewriteRule ^kontak$ index.php?page=kontak [L]
+
+RewriteRule ^kema$ index.php?page=kema [L]
+RewriteRule ^km/([A-Za-z0-9-]+)$ index.php?page=km&id=$1 [L]
+
+RewriteRule ^proker$ index.php?page=proker [L]
+RewriteRule ^kegiatan/([0-9]+)$ index.php?page=kegiatan&id=$1 [L]
+RewriteRule ^kegiatan/([0-9]+)/([A-Za-z0-9-]+)$ index.php?page=kegiatan&id=$1&judul=$2 [L]
+
+RewriteRule ^pengumuman$ index.php?page=pengumuman [L]
+RewriteRule ^pengumuman/p/([0-9]+)$ index.php?&page=pengumuman&p=$1 [L]
+RewriteRule ^info/([0-9]+)$ index.php?page=info&id=$1 [L]
+RewriteRule ^info/([0-9]+)/([A-Za-z0-9-]+)$ index.php?page=info&id=$1&judul=$2 [L]
+
+RewriteRule ^berita$ index.php?page=berita [L]
+RewriteRule ^berita/p/([0-9]+)$ index.php?&page=berita&p=$1 [L]
+RewriteRule ^baca/([0-9]+)$ index.php?page=baca&id=$1 [L]
+RewriteRule ^baca/([0-9]+)/([A-Za-z0-9-]+)$ index.php?page=baca&id=$1&judul=$2 [L]
+
+RewriteRule ^profil$ index.php?page=profil [L]
+
+RewriteRule ^index\.html$ index.php [L]
+
+
+
+</IfModule>
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 118.97.116.10
+deny from 118.97.116.2
+deny from 118.97.116.27
+deny from 202.69.110.78
+deny from 36.66.1.2
+deny from 36.66.1.10
+deny from 36.86.63.180
+deny from 36.86.63.182
+deny from 36.86.63.185
+deny from 36.86.63.186
+deny from 180.250.66.131
